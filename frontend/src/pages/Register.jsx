@@ -13,7 +13,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("https://taskmanager-backend-snlf.onrender.com/api/auth/register", {
+      const res = await axios.post("https://taskmanager-backend-sn1f.onrender.com/api/auth/register", {
         name,
         email,
         password,

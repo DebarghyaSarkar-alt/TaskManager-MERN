@@ -22,7 +22,7 @@ function Dashboard() {
   };
 
   const fetchTasks = async () => {
-    const res = await axios.get("https://taskmanager-backend-snlf.onrender.com/api/tasks", config);
+    const res = await axios.get("https://taskmanager-backend-sn1f.onrender.com/api/tasks", config);
     setTasks(res.data.tasks);
   };
 
@@ -35,7 +35,7 @@ function Dashboard() {
     }
 
     await axios.post(
-      "https://taskmanager-backend-snlf.onrender.com/api/tasks",
+      "https://taskmanager-backend-sn1f.onrender.com/api/tasks",
       { title, description, priority },
       config
     );
@@ -47,13 +47,13 @@ function Dashboard() {
   };
 
   const deleteTask = async (id) => {
-    await axios.delete(`https://taskmanager-backend-snlf.onrender.com/api/tasks/${id}`, config);
+    await axios.delete(`https://taskmanager-backend-sn1f.onrender.com/api/tasks/${id}`, config);
     fetchTasks();
   };
 
   const toggleTask = async (id) => {
     await axios.patch(
-      `https://taskmanager-backend-snlf.onrender.com/api/tasks/${id}/toggle`,
+      `https://taskmanager-backend-sn1f.onrender.com/api/tasks/${id}/toggle`,
       {},
       config
     );
@@ -81,7 +81,7 @@ function Dashboard() {
     }
 
     await axios.put(
-      `https://taskmanager-backend-snlf.onrender.com/api/tasks/${id}`,
+      `https://taskmanager-backend-sn1f.onrender.com/api/tasks/${id}`,
       {
         title: editTitle,
         description: editDescription,
